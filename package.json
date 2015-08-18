@@ -3,7 +3,7 @@
   "scripts": {
     "build" : "harp compile public www & browserify main.js > www/bundle.js",
     "start" : "watchify main.js -o public/bundle.js & harp server public",
-    "deploy": "npm run build & surge --project www"
+    "deploy": "npm run build && surge --project www"
   },
   "devDependencies": {
     "harp": "0.17.0",
