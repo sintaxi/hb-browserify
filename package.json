@@ -1,0 +1,14 @@
+{
+  "name": "hb-browserify",
+  "scripts": {
+    "build" : "harp compile public www & browserify main.js > www/bundle.js",
+    "start" : "watchify main.js -o public/bundle.js & harp server public",
+    "deploy": "npm run build & surge --project www"
+  },
+  "devDependencies": {
+    "harp": "0.17.0",
+    "browserify": "^10.2.6",
+    "uglifyjs": "~2.4.10",
+    "watchify": "^3.2.3"
+  }
+}
